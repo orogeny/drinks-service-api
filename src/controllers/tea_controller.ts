@@ -1,10 +1,8 @@
 import { Request, Response } from "express";
+import * as teaService from "../services/tea_service";
 
 export const getTea = async (req: Request, res: Response) => {
-  const drink = {
-    drinkType: "Tea",
-    name: "Green",
-  };
+  const tea = teaService.getTea();
 
-  res.json(drink).status(200);
+  res.json(tea).status(200);
 };
