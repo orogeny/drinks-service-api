@@ -9,3 +9,8 @@ export const getCoffee = async (
   const coffee = coffeeService.getCoffee(coffeeName);
   res.json(coffee).status(200);
 };
+
+export const getCoffeeLover = async (req: Request, res: Response) => {
+  const msg = coffeeService.getCoffeeLover();
+  res.send(msg).status(200);
+};
