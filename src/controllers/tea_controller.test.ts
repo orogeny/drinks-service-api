@@ -11,4 +11,14 @@ describe("/tea endpoint", () => {
       name: "Green",
     });
   });
+
+  test("GET /tea returns requested tea name", async () => {
+    const res = await request(app).get("/tea?teaName=Assam");
+
+    expect(res.statusCode).toEqual(200);
+    expect(res.body).toEqual({
+      drinkType: "Tea",
+      name: "Assam",
+    });
+  });
 });

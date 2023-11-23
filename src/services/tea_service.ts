@@ -1,6 +1,6 @@
-export const getTea = () => {
+export const getTea = (name = "Green") => {
   return {
     drinkType: "Tea",
-    name: "Green",
+    name,
   };
 };
